@@ -14,7 +14,7 @@ To perform differential gene expression analysis on RNA-seq data from Alzheimerâ
 - **Source:** NCBI Gene Expression Omnibus (GEO)  
 - **Type:** RNA-seq (Mouse model)  
 - **Samples:** Control vs Disease  
-- **Accession IDs:** SRR11596832, SRR11596838  
+- **Accession IDs:** SRR11596834, SRR11596836  
 - **Data Retrieval Tool:** SRA Toolkit  
 
 ---
