@@ -84,10 +84,10 @@ ENSMUSG00000061808 is the mouse ortholog of human gene **KIAA1109**.
 ### 📈 Key Visualizations
 
 **Volcano Plot**  
-![Volcano Plot](results/plots/volcano_plot.png)
+![Volcano Plot](MAandVolcanoplot.png)
 
 **MA Plot**  
-![MA Plot](results/plots/MA_plot.png)
+![MA Plot](MAandVolcanoplot.png)
 
 Additional outputs include:
 - Gene Ontology (GO) enrichment plots  
