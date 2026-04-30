@@ -187,7 +187,7 @@ RNAseq-Alzheimers-Analysis/
 - alignment.sh
 - counting.sh
 - differential_expression.R
-├── results/
+--results/
 - plots/
 - rna_seq_plots.png
 -go_downregulated.png
