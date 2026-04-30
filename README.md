@@ -20,30 +20,31 @@ To perform differential gene expression analysis on RNA-seq data from Alzheimer�
 
 ## ⚙️ Methodology / Workflow
 
-The analysis follows a standard RNA-seq pipeline:
 ⚙️ Methodology / Workflow
 
-1. Data Retrieval  
-   - RNA-seq data downloaded from NCBI GEO using SRA Toolkit  
+The analysis follows a standard RNA-seq pipeline:
 
-2. Quality Control  
-   - Raw reads assessed and trimmed using Trimmomatic  
+1. **Data Retrieval**  
+   RNA-seq data downloaded from NCBI GEO using SRA Toolkit  
 
-3. Read Alignment  
-   - Clean reads aligned to the mouse reference genome using Bowtie2  
+2. **Quality Control**  
+   Raw reads assessed and trimmed using Trimmomatic  
 
-4. Post-processing  
-   - SAMtools used for format conversion, sorting, and duplicate removal  
+3. **Read Alignment**  
+   Clean reads aligned to the mouse reference genome using Bowtie2  
 
-5. Quantification  
-   - Gene-level counts generated using featureCounts  
+4. **Post-processing**  
+   SAMtools used for format conversion, sorting, and duplicate removal  
 
-6. Differential Expression Analysis  
-   - edgeR used to identify differentially expressed genes (DEGs)  
+5. **Quantification**  
+   Gene-level counts generated using featureCounts  
 
-7. Functional Enrichment  
-   - GO and KEGG pathway analysis performed on DEGs
-  
+6. **Differential Expression Analysis**  
+   edgeR is used to identify differentially expressed genes (DEGs)  
+
+7. **Functional Enrichment**  
+   GO and KEGG pathway analysis performed on DEGs  
+
    - 🧪 Tools & Technologies
 
 - SRA Toolkit  
@@ -52,7 +53,7 @@ The analysis follows a standard RNA-seq pipeline:
 - Bowtie2
 - SAMtools  
 - featureCounts  
-- R (edgeR, ggplot2, Volcano Plot, MA plot)
+- R (edgeR, ggplot2)
 
 🔁 Reproducibility
 
@@ -72,7 +73,7 @@ Note: Scripts and commands are provided in the repository.
 ## 📊 Results
 
 - Differential gene expression analysis identified several **upregulated and downregulated genes**.
-- After multiple testing correction (FDR < 0.05), one gene (ENSMUSG00000061808) remained statistically significant.”
+- After multiple testing correction (FDR < 0.05), one gene (ENSMUSG00000061808) remained statistically significant.
   - **ENSMUSG00000061808** (mouse ortholog of human *KIAA1109*)
 - Visualization outputs include:
   - MA Plot  
@@ -112,6 +113,25 @@ This study demonstrates the effectiveness of integrating publicly available RNA-
 ---
 
 ## 📁 Repository Structure
+
+RNA-seq-Alzheimer/
+│
+├── data/
+│   └── (SRR11596832, SRR11596838)
+│
+├── scripts/
+│   ├── qc_trimming.sh
+│   ├── alignment.sh
+│   ├── counting.sh
+│   └── differential_expression.R
+│
+├── results/
+│   ├── plots/
+│   │   ├── volcano_plot.png
+│   │   ├── MA_plot.png
+│   ├── DEG_results.csv
+│
+├── README.md
 
 ---
 
