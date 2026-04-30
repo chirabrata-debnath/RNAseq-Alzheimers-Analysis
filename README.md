@@ -11,16 +11,15 @@ To perform differential gene expression analysis on RNA-seq data from Alzheimer�
 ---
 
 ## 📂 Dataset
-- **Source:** NCBI Gene Expression Omnibus (GEO)
-- **Type:** RNA-seq (Mouse model)
-- **Samples:** Control vs Disease
-- Raw sequencing data retrieved using **SRA Toolkit**
+- **Source:** NCBI Gene Expression Omnibus (GEO)  
+- **Type:** RNA-seq (Mouse model)  
+- **Samples:** Control vs Disease  
+- **Accession IDs:** SRR11596832, SRR11596838  
+- **Data Retrieval Tool:** SRA Toolkit  
 
 ---
 
 ## ⚙️ Methodology / Workflow
-
-⚙️ Methodology / Workflow
 
 The analysis follows a standard RNA-seq pipeline:
 
@@ -40,22 +39,26 @@ The analysis follows a standard RNA-seq pipeline:
    Gene-level counts generated using featureCounts  
 
 6. **Differential Expression Analysis**  
-   edgeR is used to identify differentially expressed genes (DEGs)  
+   edgeR used to identify differentially expressed genes (DEGs)  
 
 7. **Functional Enrichment**  
    GO and KEGG pathway analysis performed on DEGs  
 
-   - 🧪 Tools & Technologies
+---
+
+## 🧪 Tools & Technologies
 
 - SRA Toolkit  
-- Trimmomatic
-- FastQC
-- Bowtie2
+- FastQC  
+- Trimmomatic  
+- Bowtie2  
 - SAMtools  
 - featureCounts  
-- R (edgeR, ggplot2)
+- R (edgeR, ggplot2)  
 
-🔁 Reproducibility
+---
+
+## 🔁 Reproducibility
 
 To reproduce this analysis:
 
@@ -66,28 +69,38 @@ To reproduce this analysis:
 5. Generate count matrix using featureCounts  
 6. Run differential expression analysis in R using edgeR  
 
-Note: Scripts and commands are provided in the repository.
+*Note: Scripts and commands are provided in the repository.*
 
 ---
 
 ## 📊 Results
 
-- Differential gene expression analysis identified several **upregulated and downregulated genes**.
-- After multiple testing correction (FDR < 0.05), one gene (ENSMUSG00000061808) remained statistically significant.
-  - **ENSMUSG00000061808** (mouse ortholog of human *KIAA1109*)
-- Visualization outputs include:
-  - MA Plot  
-  - Volcano Plot  
-  - Gene Ontology (GO) enrichment plots  
-  - KEGG pathway enrichment analysis  
+Differential gene expression analysis identified several upregulated and downregulated genes.
+
+After multiple testing correction (FDR < 0.05), one gene (**ENSMUSG00000061808**) remained statistically significant.
+
+ENSMUSG00000061808 is the mouse ortholog of human gene **KIAA1109**.
+
+### 📈 Key Visualizations
+
+**Volcano Plot**  
+![Volcano Plot](results/plots/volcano_plot.png)
+
+**MA Plot**  
+![MA Plot](results/plots/MA_plot.png)
+
+Additional outputs include:
+- Gene Ontology (GO) enrichment plots  
+- KEGG pathway enrichment analysis  
 
 ---
 
 ## 🔬 Key Findings
 
-- Significant downregulation of **ENSMUSG00000061808** suggests a potential role in:
+- Significant downregulation of ENSMUSG00000061808 suggests a potential role in:
   - Immune system regulation  
   - Neurodegenerative pathways  
+
 - Functional enrichment analysis indicates involvement of:
   - Neuroinflammation  
   - Synaptic dysfunction  
@@ -100,6 +113,7 @@ Note: Scripts and commands are provided in the repository.
 - Most genes did not pass multiple testing correction (FDR), likely due to:
   - Limited sample size  
   - Biological variability  
+
 - Results should be validated with:
   - Larger datasets  
   - Additional experimental studies  
@@ -114,28 +128,11 @@ This study demonstrates the effectiveness of integrating publicly available RNA-
 
 ## 📁 Repository Structure
 
-RNA-seq-Alzheimer/
-│
-├── data/
-│   └── (SRR11596832, SRR11596838)
-│
-├── scripts/
-│   ├── qc_trimming.sh
-│   ├── alignment.sh
-│   ├── counting.sh
-│   └── differential_expression.R
-│
-├── results/
-│   ├── plots/
-│   │   ├── volcano_plot.png
-│   │   ├── MA_plot.png
-│   ├── DEG_results.csv
-│
-├── README.md
 
 ---
 
 ## 📌 Future Work
+
 - Increase sample size for improved statistical power  
 - Integrate multi-omics data (proteomics, epigenomics)  
 - Validate candidate genes in human datasets  
@@ -144,6 +141,7 @@ RNA-seq-Alzheimer/
 ---
 
 ## 👤 Author
+
 **Chirabrata Debnath**  
 M.Sc. Biotechnology  
 Chandigarh University  
@@ -151,4 +149,5 @@ Chandigarh University
 ---
 
 ## 📎 Acknowledgment
+
 This work was carried out using publicly available datasets from NCBI GEO and standard bioinformatics tools.
