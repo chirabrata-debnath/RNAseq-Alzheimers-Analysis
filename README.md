@@ -182,19 +182,19 @@ This study demonstrates the effectiveness of integrating publicly available RNA-
 
 ## 📁 Repository Structure
 RNAseq-Alzheimers-Analysis/
-├── scripts/
-│ ├── qc_trimming.sh
-│ ├── alignment.sh
-│ ├── counting.sh
-│ └── differential_expression.R
+ scripts/
+- qc_trimming.sh
+- alignment.sh
+- counting.sh
+- differential_expression.R
 ├── results/
-│ ├── plots/
-│ │ └── rna_seq_plots.png
-│ ├── go_downregulated.png
-│ ├── go_upregulated.png
-│ ├── kegg_upregulated.png
-│ └── kegg_downregulated.png
-└── README.md
+- plots/
+- rna_seq_plots.png
+-go_downregulated.png
+- go_upregulated.png
+-kegg_upregulated.png
+- kegg_downregulated.png
+
 
 
 ---
