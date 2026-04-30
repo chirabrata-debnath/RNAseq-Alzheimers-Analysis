@@ -83,11 +83,14 @@ ENSMUSG00000061808 is the mouse ortholog of human gene **KIAA1109**.
 
 ### 📈 Key Visualizations
 
-**Volcano Plot**  
-![Volcano Plot](MAandVolcanoplot.png)
+## 📈 Key Visualizations
 
-**MA Plot**  
-![MA Plot](MAandVolcanoplot.png)
+![RNA-seq Plots](results/plots/rna_seq_plots.png)
+
+**Figure 1:**  
+(A) Volcano plot showing differentially expressed genes with FDR < 0.05.  
+(B) MA plot showing log fold change vs average expression.  
+The gene ENSMUSG00000061808 is significantly downregulated.
 
 Additional outputs include:
 - Gene Ontology (GO) enrichment plots  
