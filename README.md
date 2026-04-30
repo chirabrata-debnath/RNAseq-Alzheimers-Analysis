@@ -21,24 +21,58 @@ To perform differential gene expression analysis on RNA-seq data from Alzheimer�
 ## ⚙️ Methodology / Workflow
 
 The analysis follows a standard RNA-seq pipeline:
+⚙️ Methodology / Workflow
 
----
+1. Data Retrieval  
+   - RNA-seq data downloaded from NCBI GEO using SRA Toolkit  
 
-## 🧪 Tools & Technologies
-- **SRA Toolkit** – Data retrieval  
-- **Trimmomatic** – Quality control and trimming  
-- **Bowtie2** – Read alignment  
-- **SAMtools** – File processing and duplicate removal  
-- **featureCounts** – Gene quantification  
-- **R (edgeR package)** – Differential expression analysis  
-- **NCBI GEO** – Public dataset source  
+2. Quality Control  
+   - Raw reads assessed and trimmed using Trimmomatic  
+
+3. Read Alignment  
+   - Clean reads aligned to the mouse reference genome using Bowtie2  
+
+4. Post-processing  
+   - SAMtools used for format conversion, sorting, and duplicate removal  
+
+5. Quantification  
+   - Gene-level counts generated using featureCounts  
+
+6. Differential Expression Analysis  
+   - edgeR used to identify differentially expressed genes (DEGs)  
+
+7. Functional Enrichment  
+   - GO and KEGG pathway analysis performed on DEGs
+  
+   - 🧪 Tools & Technologies
+
+- SRA Toolkit  
+- Trimmomatic
+- FastQC
+- Bowtie2
+- SAMtools  
+- featureCounts  
+- R (edgeR, ggplot2, Volcano Plot, MA plot)
+
+🔁 Reproducibility
+
+To reproduce this analysis:
+
+1. Download raw data using SRA Toolkit  
+2. Perform quality trimming using Trimmomatic  
+3. Align reads using Bowtie2  
+4. Process alignment files using SAMtools  
+5. Generate count matrix using featureCounts  
+6. Run differential expression analysis in R using edgeR  
+
+Note: Scripts and commands are provided in the repository.
 
 ---
 
 ## 📊 Results
 
 - Differential gene expression analysis identified several **upregulated and downregulated genes**.
-- **Only one gene passed the statistical threshold (FDR < 0.05):**
+- After multiple testing correction (FDR < 0.05), one gene (ENSMUSG00000061808) remained statistically significant.”
   - **ENSMUSG00000061808** (mouse ortholog of human *KIAA1109*)
 - Visualization outputs include:
   - MA Plot  
