@@ -27,7 +27,7 @@ The analysis follows a standard RNA-seq pipeline:
    RNA-seq data downloaded from NCBI GEO using SRA Toolkit  
 
 2. **Quality Control**  
-   Raw reads were assessed and trimmed using Trimmomatic and checked using FastQC
+   Raw reads were assessed and trimmed using Trimmomatic and checked using FastQC  
 
 3. **Read Alignment**  
    Clean reads aligned to the mouse reference genome using Bowtie2  
@@ -55,7 +55,8 @@ The analysis follows a standard RNA-seq pipeline:
 - SAMtools  
 - featureCounts  
 - R (edgeR, ggplot2)  
-- DAVID 
+- DAVID  
+
 ---
 
 ## 🔁 Reproducibility
@@ -81,7 +82,7 @@ After multiple testing correction (FDR < 0.05), one gene (**ENSMUSG00000061808**
 
 ENSMUSG00000061808 is the mouse ortholog of human gene **KIAA1109**.
 
-### 📈 Key Visualizations
+---
 
 ## 📈 Key Visualizations
 
@@ -92,15 +93,11 @@ ENSMUSG00000061808 is the mouse ortholog of human gene **KIAA1109**.
 (B) MA plot showing log fold change vs average expression.  
 The gene ENSMUSG00000061808 is significantly downregulated.
 
-Additional outputs include:
-- Gene Ontology (GO) enrichment plots  
-- KEGG pathway enrichment analysis
+---
 
-  ## 🧬 Gene Ontology (GO) Analysis
+## 🧬 Gene Ontology (GO) Analysis
 
 Gene Ontology (GO) enrichment analysis was performed to identify functional patterns among differentially expressed genes. Separate analyses were conducted for upregulated and downregulated gene sets.
-
----
 
 ### 🔻 GO Analysis of Downregulated Genes
 
@@ -136,12 +133,14 @@ These functions indicate involvement in transport processes, receptor interactio
 
 Due to the limited sample size and the small number of genes passing FDR correction, GO enrichment analysis was performed using genes filtered by nominal p-value thresholds. Therefore, these results are exploratory and should be interpreted with caution.
 
-- ### KEGG Pathway Analysis
+---
 
-#### 🔺 Upregulated Genes
+## 🧬 KEGG Pathway Analysis
+
+### 🔺 Upregulated Genes
 ![KEGG Upregulated](results/kegg_upregulated.png)
 
-#### 🔻 Downregulated Genes
+### 🔻 Downregulated Genes
 ![KEGG Downregulated](results/kegg_downregulated.png)
 
 These pathways suggest involvement of immune signaling and neuronal communication processes in Alzheimer’s disease.
@@ -182,6 +181,19 @@ This study demonstrates the effectiveness of integrating publicly available RNA-
 ---
 
 ## 📁 Repository Structure
+RNAseq-Alzheimers-Analysis/
+├── scripts/
+│ ├── qc_trimming.sh
+│ ├── alignment.sh
+│ ├── counting.sh
+│ └── differential_expression.R
+├── results/
+│ ├── plots/
+│ │ └── rna_seq_plots.png
+│ ├── go_downregulated.png
+│ ├── go_upregulated.png
+│ ├── kegg_upregulated.png
+│ └── kegg_downregulated.png
 
 
 ---
