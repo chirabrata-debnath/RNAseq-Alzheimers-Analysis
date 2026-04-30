@@ -194,6 +194,7 @@ RNAseq-Alzheimers-Analysis/
 │ ├── go_upregulated.png
 │ ├── kegg_upregulated.png
 │ └── kegg_downregulated.png
+└── README.md
 
 
 ---
