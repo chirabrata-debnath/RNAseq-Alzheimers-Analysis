@@ -96,6 +96,46 @@ Additional outputs include:
 - Gene Ontology (GO) enrichment plots  
 - KEGG pathway enrichment analysis
 
+  ## 🧬 Gene Ontology (GO) Analysis
+
+Gene Ontology (GO) enrichment analysis was performed to identify functional patterns among differentially expressed genes. Separate analyses were conducted for upregulated and downregulated gene sets.
+
+---
+
+### 🔻 GO Analysis of Downregulated Genes
+
+![GO Downregulated](results/go_downregulated.png)
+
+The downregulated genes were enriched in the following GO terms:
+- Receptor complex  
+- External side of plasma membrane  
+- Anchored component of membrane  
+- Immune receptor activity  
+- Hormone binding  
+
+These results suggest that genes involved in membrane-associated structures and immune signaling processes are downregulated, which may affect cellular communication and immune response mechanisms.
+
+---
+
+### 🔺 GO Analysis of Upregulated Genes
+
+![GO Upregulated](results/go_upregulated.png)
+
+The upregulated genes showed enrichment in:
+- Collagen receptor activity  
+- Hemoglobin binding  
+- Insulin-like growth factor I binding  
+- Protein transporter activity  
+- Low-density lipoprotein receptor binding  
+
+These functions indicate involvement in transport processes, receptor interactions, and metabolic regulation, which may reflect disease-related or compensatory cellular responses.
+
+---
+
+### ⚠️ Interpretation Note
+
+Due to the limited sample size and the small number of genes passing FDR correction, GO enrichment analysis was performed using genes filtered by nominal p-value thresholds. Therefore, these results are exploratory and should be interpreted with caution.
+
 - ### KEGG Pathway Analysis
 
 #### 🔺 Upregulated Genes
