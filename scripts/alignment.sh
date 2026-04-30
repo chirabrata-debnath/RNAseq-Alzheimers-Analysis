@@ -15,3 +15,14 @@ bowtie2 -x /home/cbd/mm9_bowtie2/mm9 \
 bowtie2 -x /home/cbd/mm9_bowtie2/mm9 \
 -U /home/cbd/outputSRR11596836.fastq \
 -S /home/cbd/outputSRR11596836.sam
+
+# Convert SAM to BAM
+
+samtools view -S -b outputSRR11596836.sam > outputSRR11596836.bam
+samtools view -S -b output2SRR11596834.sam > output2SRR11596834.bam
+
+
+# Sort BAM files
+
+samtools sort -o outputSRR11596836_sorted.bam outputSRR11596836.bam
+samtools sort -o output2SRR11596834_sorted.bam output2SRR11596834.bam
