@@ -27,7 +27,7 @@ The analysis follows a standard RNA-seq pipeline:
    RNA-seq data downloaded from NCBI GEO using SRA Toolkit  
 
 2. **Quality Control**  
-   Raw reads assessed and trimmed using Trimmomatic  
+   Raw reads were assessed and trimmed using Trimmomatic and checked using FastQC
 
 3. **Read Alignment**  
    Clean reads aligned to the mouse reference genome using Bowtie2  
