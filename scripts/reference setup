@@ -1,0 +1,7 @@
+# Download gene annotation (GTF)
+
+# -----------------------------------------
+
+wget ftp://ftp.ensembl.org/pub/release-67/gtf/mus_musculus/Mus_musculus.NCBIM37.67.gtf.gz
+
+gunzip Mus_musculus.NCBIM37.67.gtf.gz
