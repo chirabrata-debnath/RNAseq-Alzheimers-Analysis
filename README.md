@@ -94,7 +94,19 @@ The gene ENSMUSG00000061808 is significantly downregulated.
 
 Additional outputs include:
 - Gene Ontology (GO) enrichment plots  
-- KEGG pathway enrichment analysis  
+- KEGG pathway enrichment analysis
+
+- ### KEGG Pathway Analysis
+
+#### 🔺 Upregulated Genes
+![KEGG Upregulated](results/kegg_upregulated.png)
+
+#### 🔻 Downregulated Genes
+![KEGG Downregulated](results/kegg_downregulated.png)
+
+These pathways suggest involvement of immune signaling and neuronal communication processes in Alzheimer’s disease.
+
+> Note: KEGG analysis is exploratory due to limited sample size and use of nominal p-value filtering.
 
 ---
 
