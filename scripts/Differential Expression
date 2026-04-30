@@ -1,0 +1,68 @@
+# -----------------------------------------
+
+# Differential Expression Analysis using edgeR
+
+# -----------------------------------------
+
+library(edgeR)
+
+# Load count data
+
+counts <- read.delim("gene_counts.txt", comment.char="#")
+
+# Prepare matrix
+
+rownames(counts) <- counts$Geneid
+counts <- counts[, -c(1:6)]
+
+# Filter low-expression genes
+
+counts <- counts[rowSums(counts) > 0, ]
+
+# Define groups
+
+group <- factor(c("Control", "Disease"))
+
+# Create DGEList
+
+dge <- DGEList(counts=counts, group=group)
+
+# Normalize
+
+dge <- calcNormFactors(dge)
+
+# Estimate dispersion
+
+dge <- estimateDisp(dge)
+
+# Differential expression test
+
+et <- exactTest(dge)
+
+# Extract results
+
+results <- topTags(et, n=Inf)$table
+
+# Save results
+
+write.csv(results, file="edger_results.csv")
+
+# Volcano plot
+
+logFC <- results$logFC
+negLogP <- -log10(results$PValue)
+
+plot(logFC, negLogP, pch=20, col="grey",
+xlab="Log2 Fold Change", ylab="-log10(p-value)",
+main="Volcano Plot")
+
+sig <- results$PValue < 0.05 & abs(results$logFC) > 1
+points(logFC[sig], negLogP[sig], col="red", pch=20)
+
+# MA plot
+
+plot(results$logCPM, results$logFC, pch=20, col="grey",
+xlab="Average log CPM", ylab="Log2 Fold Change",
+main="MA Plot")
+
+points(results$logCPM[sig], results$logFC[sig], col="blue", pch=20)
